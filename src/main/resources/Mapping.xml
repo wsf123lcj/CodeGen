@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping>
+    <postgresMap>
+        <type postgres="bit" javaType="java.lang.Boolean" isArray="false"/>
+        <type postgres="bool" javaType="java.lang.Boolean" isArray="false"/>
+
+        <type postgres="int2" javaType="java.lang.Integer" isArray="false"/>
+        <type postgres="int4" javaType="java.lang.Integer" isArray="false"/>
+        <type postgres="serial" javaType="java.lang.Integer" isArray="false"/>
+
+        <type postgres="int8" javaType="java.lang.Long" isArray="false"/>
+
+        <type postgres="float4" javaType="java.lang.Float" isArray="false"/>
+
+        <type postgres="float8" javaType="java.lang.Double" isArray="false"/>
+        <type postgres="money" javaType="java.lang.Double" isArray="false"/>
+
+        <type postgres="varchar" javaType="java.lang.String" isArray="false"/>
+        <type postgres="bpchar" javaType="java.lang.String" isArray="false"/>
+        <type postgres="char" javaType="java.lang.String" isArray="false"/>
+        <type postgres="text" javaType="java.lang.String" isArray="false"/>
+
+        <type postgres="numeric" javaType="java.math.BigDecimal" isArray="false"/>
+
+        <type postgres="time" javaType="java.sql.Time" isArray="false"/>
+        <type postgres="timestamp" javaType="java.sql.Timestamp" isArray="false"/>
+
+        <type postgres="cidr" javaType="java.lang.Object" isArray="false"/>
+        <type postgres="inet" javaType="java.lang.Object" isArray="false"/>
+        <type postgres="macaddr" javaType="java.lang.Object" isArray="false"/>
+        <type postgres="box" javaType="java.lang.Object" isArray="false"/>
+        <type postgres="circle" javaType="java.lang.Object" isArray="false"/>
+        <type postgres="interval" javaType="java.lang.Object" isArray="false"/>
+        <type postgres="line" javaType="java.lang.Object" isArray="false"/>
+        <type postgres="lseg" javaType="java.lang.Object" isArray="false"/>
+        <type postgres="path" javaType="java.lang.Object" isArray="false"/>
+        <type postgres="point" javaType="java.lang.Object" isArray="false"/>
+        <type postgres="polygon" javaType="java.lang.Object" isArray="false"/>
+        <type postgres="varbit" javaType="java.lang.Object" isArray="false"/>
+    </postgresMap>
+
+    <oracleMap>
+        <type oracle="char" javaType="java.lang.String" isArray="false"/>
+        <type oracle="varchar2" javaType="java.lang.String" isArray="false"/>
+        <type oracle="long" javaType="java.lang.String" isArray="false"/>
+        <type oracle="nchar" javaType="java.lang.String" isArray="false"/>
+
+        <type oracle="int" javaType="java.lang.Integer" isArray="false"/>
+        <type oracle="smallint" javaType="java.lang.Integer" isArray="false"/>
+        <type oracle="integer" javaType="java.lang.Integer" isArray="false"/>
+
+        <type oracle="raw" javaType="java.lang.Byte" isArray="true"/>
+        <type oracle="longraw" javaType="java.lang.Byte" isArray="true"/>
+
+        <type oracle="rowid" javaType="java.sql.RowId" isArray="false"/>
+        <type oracle="nclob" javaType="java.sql.NClob" isArray="false"/>
+        <type oracle="ref cursor" javaType="java.sql.ResultSet" isArray="false"/>
+        <type oracle="blob" javaType="java.sql.Blob" isArray="false"/>
+        <type oracle="clob" javaType="java.sql.Clob" isArray="false"/>
+        <type oracle="date" javaType="java.sql.Date" isArray="false"/>
+        <type oracle="timestamp" javaType="java.sql.Timestamp" isArray="false"/>
+        <type oracle="timestamp with time zone" javaType="java.sql.Timestamp" isArray="false"/>
+        <type oracle="timestamp with local time zone" javaType="java.sql.Timestamp" isArray="false"/>
+    </oracleMap>
+</mapping>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generator>
+	<!-- <dataSource/>只能有一个，配置数据源(必写) -->
+	<dataSource>
+		<!-- 以下五个标签均只能有一个 -->
+		<!-- 用户名(必写) -->
+		<user>dci</user>
+		<!-- 密码(必写) -->
+		<password>dci</password>
+		<!-- 连接url(必写) -->
+		<url>jdbc:oracle:thin:@//192.168.200.39:1521/orclrh.geo-k.cn</url>
+		<!-- 驱动类全名(必写) -->
+		<driver>oracle.jdbc.driver.OracleDriver</driver>
+		<!-- 数据库方言(必写)(提供postgres与oracle两个参数) -->
+		<dialectEnum>oracle</dialectEnum>
+	</dataSource>
+	
+	<!-- <context/>只能有一个，模板配置有关标签(必写) -->
+	<context author="wsf">
+		<!-- <templates/>只能有一个，一组模板示例，配置一组示例(必写) -->
+		<templates>
+			<!-- <template/>可以有多个，单个模板示例，一个标签对应一个*.vm模板文件(至少一个) -->
+			<!-- id: 唯一标识(必写)
+				 targetProAbsClassPath: 生成代码的目标项目的ClassPath目录(必写)
+				 vmTplName: 模板文件全名(必写)
+				 targetPackage: 该模板文件对应的*.java文件所在项目的包路径(必写)
+				 suffix: 模板对应的类的后缀名(非必写) -->
+			<template id="pojo" targetProAbsClassPath="D:\Work\idea_j2ee\untitled\src"
+					  vmTplName="Pojo.vm" targetPackage="com.geok.pojo" suffix="Repository"/>
+			<template id="dao" targetProAbsClassPath="D:\Work\idea_j2ee\untitled\src"
+					  vmTplName="Dao.vm" targetPackage="com.geok.dao" suffix="DAO"/>
+			<template id="impl" targetProAbsClassPath="D:\Work\idea_j2ee\untitled\src"
+					  vmTplName="Impl.vm" targetPackage="com.geok.dao.impl" suffix="DAOImpl"/>
+			<template id="service" targetProAbsClassPath="D:\Work\idea_j2ee\untitled\src"
+					  vmTplName="Service.vm" targetPackage="com.geok.service" suffix="Service"/>
+		</templates>
+		<!-- <db-set/>只能有一个，配置一组数据库(必写) -->
+		<db-set>
+			<!-- <db/>可以有多个，对应一个数据库(至少一个)
+				 nativeDbName: 要映射的数据库本地名称(必写)
+				 camelCaseName：是否驼峰命名表名，默认为true(非必写) -->
+			<db nativeDbName="chinacities" camelCaseName="true">
+				<!-- <table/>可以有多个，对应一张表(非必写)，若没有配置<table/>则默认映射所有表
+					 nativeTableName: 要映射的数据库本地表名(必写)
+					 entityName: 实体类名 = entityName + suffix(非必写) -->
+				<table nativeTableName="hat_area" entityName="HatArea"/>
+				<table nativeTableName="hat_city" entityName="HatCity"/>
+			</db>
+			<db nativeDbName="test" camelCaseName="false"/>
+		</db-set>
+	</context>
+</generator>
