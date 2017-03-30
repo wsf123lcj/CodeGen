@@ -146,6 +146,7 @@ public class GeneratorExecutor {
                 }
             }
         }
+        System.out.println();
     }
 
 
